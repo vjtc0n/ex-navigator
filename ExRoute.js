@@ -1,7 +1,7 @@
 'use strict';
 
 import { Component } from 'react';
-import type * as ExNavigator from './ExNavigator';
+import * as ExNavigator from './ExNavigator';
 
 export type ExRoute = {
   getTitle?: (navigator: ExNavigator, index: number, state: Object) => ?string,
@@ -32,5 +32,5 @@ export type ExRoute = {
   ) => ?Component,
   getSceneClass?: () => typeof Component,
   configureScene?: () => typeof Navigator.SceneConfigs.PushFromRight,
-  renderScene?: (navigator: ExNavigator) => Component,
+  renderScene?: (navigator: ExNavigator) => Component
 };

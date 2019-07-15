@@ -5,7 +5,7 @@
   "main": "ExNavigator.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/expo/ex-navigator.git"
+    "url": "git+https://github.com/vjtc0n/ex-navigator.git"
   },
   "keywords": [
     "react-native",

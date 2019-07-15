@@ -7,7 +7,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from 'react-native';
 
 import invariant from 'invariant';
@@ -19,14 +19,14 @@ import Layout from './Layout';
 
 import { BackIcon } from './ExNavigatorIcons';
 
-import type { Navigator } from 'react-native-deprecated-custom-components';
-import type * as ExNavigator from './ExNavigator';
-import type * as ExRoute from './ExRoute';
+import { Navigator } from 'react-native-deprecated-custom-components';
+import * as ExNavigator from './ExNavigator';
+import * as ExRoute from './ExRoute';
 
 type BarStyles = {
   titleStyle?: any,
   barButtonTextStyle?: any,
-  barButtonIconStyle?: any,
+  barButtonIconStyle?: any
 };
 
 class NavigationBarRouteMapper {
@@ -54,7 +54,8 @@ class NavigationBarRouteMapper {
     return (
       <Text
         style={[ExNavigatorStyles.barTitleText, this._titleStyle]}
-        allowFontScaling={false}>
+        allowFontScaling={false}
+      >
         {shortenTitle(route.getTitle(this._navigator, index, state))}
       </Text>
     );
@@ -112,9 +113,10 @@ class NavigationBarRouteMapper {
           style={[
             ExNavigatorStyles.barButtonText,
             ExNavigatorStyles.barBackButtonText,
-            this._barButtonTextStyle,
+            this._barButtonTextStyle
           ]}
-          allowFontScaling={false}>
+          allowFontScaling={false}
+        >
           {title}
         </Text>
       );
@@ -124,7 +126,8 @@ class NavigationBarRouteMapper {
       <TouchableOpacity
         pressRetentionOffset={ExNavigatorStyles.barButtonPressRetentionOffset}
         onPress={() => this._navigator.pop()}
-        style={[ExNavigatorStyles.barBackButton, styles.backButtonStyle]}>
+        style={[ExNavigatorStyles.barBackButton, styles.backButtonStyle]}
+      >
         <BackIcon
           style={[ExNavigatorStyles.barButtonIcon, this._barButtonIconStyle]}
         />
@@ -178,7 +181,7 @@ export default class ExRouteRenderer {
       return cloneReferencedElement(scene, {
         ref: component => {
           route.scene = component;
-        },
+        }
       });
     }
 
@@ -198,7 +201,9 @@ export default class ExRouteRenderer {
   }
 
   onWillFocus(event) {
-    let { data: { route } } = event;
+    let {
+      data: { route }
+    } = event;
     if (route.onWillFocus) {
       route.onWillFocus(event);
     }
@@ -220,7 +225,9 @@ export default class ExRouteRenderer {
   }
 
   onDidFocus(event) {
-    let { data: { route } } = event;
+    let {
+      data: { route }
+    } = event;
     if (route.onDidFocus) {
       route.onDidFocus(event);
     }
@@ -261,6 +268,6 @@ function shortenTitle(title) {
 let styles = StyleSheet.create({
   backButton: {
     flexDirection: 'row',
-    alignItems: 'center',
-  },
+    alignItems: 'center'
+  }
 });

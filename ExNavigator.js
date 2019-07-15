@@ -14,7 +14,7 @@ import ExSceneConfigs from './ExSceneConfigs';
 
 import * as ExNavigatorIcons from './ExNavigatorIcons';
 
-import type * as ExRoute from './ExRoute';
+import * as ExRoute from './ExRoute';
 
 export default class ExNavigator extends React.Component {
   static Styles = ExNavigatorStyles;
