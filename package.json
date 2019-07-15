@@ -21,10 +21,10 @@
   },
   "homepage": "https://github.com/expo/ex-navigator#readme",
   "dependencies": {
-    "@expo/react-native-responsive-image": "^1.2.1",
+    "@expo/react-native-responsive-image": "https://github.com/expo/react-native-responsive-image.git",
     "invariant": "^2.2.0",
     "prop-types": "^15.5.8",
     "react-clone-referenced-element": "^1.0.1",
-    "react-native-deprecated-custom-components": "^0.1.0"
+    "react-native-deprecated-custom-components": "^0.1.2"
   }
 }
